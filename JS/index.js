@@ -1,3 +1,4 @@
+/* Constructor Function is added to generate Product objects*/
 function Product(name, price){
     this.name = name;
     this.price = price;
@@ -7,8 +8,9 @@ function Product(name, price){
     }
 }
 
+/*Function to update the price from an existing product*/
 function updatePrice(item, newPrice){
-    let newItem = Object.assign({}, item);
+    let newItem = Object.assign({}, item);      //Copy of the original product
     newItem.price = newPrice;
     return newItem;
 }
