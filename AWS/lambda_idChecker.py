@@ -18,6 +18,7 @@ def lambda_handler(event, context):
     else:
         return {'status': 'error', 'message': 'Invalid flag'}
 
+    # Check if the ID exists in the database
     try:
         rds.execute_statement(
             secretArn=secretArn,
